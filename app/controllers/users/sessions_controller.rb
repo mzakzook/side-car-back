@@ -23,7 +23,8 @@ class Users::SessionsController < Devise::SessionsController
       first_name: resource.first_name,
       last_name: resource.last_name,
       cell_number: resource.cell_number,
-      avatar: resource.avatar
+      avatar: resource.avatar,
+      id: resource.id
     }
   end
 
