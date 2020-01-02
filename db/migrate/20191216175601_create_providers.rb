@@ -3,7 +3,7 @@ class CreateProviders < ActiveRecord::Migration[6.0]
     create_table :providers do |t|
       t.string :biz_name
       t.string :tax_id
-      t.string :photo_id
+      t.string :placeholder_image
       t.string :website
       t.string :yelp
       t.string :biz_phone

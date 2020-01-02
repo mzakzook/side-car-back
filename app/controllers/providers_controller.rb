@@ -10,7 +10,9 @@ class ProvidersController < ApplicationController
   end
 
   def create
+    
     provider = Provider.create(provider_params)
+    
     render json: ProviderSerializer.new(provider)
   end
 
@@ -29,7 +31,7 @@ class ProvidersController < ApplicationController
   private
 
   def provider_params
-    params.require(:provider).permit(:biz_name, :tax_id, :photo_id, :website, :yelp, :biz_phone, :category, :user_id)
+    params.require(:provider).permit(:biz_name, :tax_id, :placeholder_image, :website, :yelp, :biz_phone, :category, :user_id, images: [])
   end
 end
 

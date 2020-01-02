@@ -58,3 +58,6 @@ gem 'faker'
 
 # Serializer
 gem 'fast_jsonapi'
+
+
+# gem "aws-sdk-s3", require: false
