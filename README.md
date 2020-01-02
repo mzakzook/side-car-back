@@ -1,5 +1,7 @@
 # README
 
+Special thank you to Katherine Kelly (@katstar). She was instrumental in linking devise with a React Native frontend and creating tokens for user accounts.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
