@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :events
   resources :providers
   get '/find_user', to: 'find_user#index'
+  get '/random_provider', to: 'providers#show'
   devise_for :users, controllers: {sessions: 'users/sessions', registrations: 'users/registrations'}
   
  

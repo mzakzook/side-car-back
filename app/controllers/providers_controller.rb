@@ -16,6 +16,18 @@ class ProvidersController < ApplicationController
     render json: ProviderSerializer.new(provider)
   end
 
+  def show
+    if params[:type] == "bartending"
+      provider = Provider.all.select{|p| p.category == "Bartending"}.sample
+      
+      render json: ProviderSerializer.new(provider)
+    else
+      provider = Provider.all.select{|p| p.category == "Food Truck"}.sample
+      render json: ProviderSerializer.new(provider)
+    end
+    
+  end
+
   def update
     provider = Provider.find(params[:id])
 		provider.update(provider_params)
